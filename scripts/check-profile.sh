@@ -16,6 +16,10 @@ for p in base linux linux-firmware mkinitcpio mkinitcpio-archiso archinstall pla
 done
 [[ -f "$ROOT/profile/profiledef.sh" ]] || { echo "Falta profile/profiledef.sh"; exit 1; }
 [[ -f "$ROOT/profile/grub/grub.cfg" ]] || { echo "Se seleccionó UEFI GRUB, pero falta profile/grub/grub.cfg."; exit 1; }
+[[ -f "$ROOT/profile/airootfs/etc/systemd/system/aquaos-live-user.service" ]] || { echo "Falta el servicio de cuenta live de AquaOS."; exit 1; }
+[[ -f "$ROOT/profile/airootfs/etc/sddm.conf.d/aquaos.conf" ]] || { echo "Falta la configuración de SDDM para AquaOS."; exit 1; }
 grep -q "bootmodes=('uefi.grub')" "$ROOT/profile/profiledef.sh" || { echo "No se encontró el modo de arranque uefi.grub esperado."; exit 1; }
-echo "Comprobación básica del perfil AquaOS completada. No confirma los paquetes ni construye una ISO."
+grep -q '^User=aquaos$' "$ROOT/profile/airootfs/etc/sddm.conf.d/aquaos.conf" || { echo "SDDM no tiene configurado el usuario live AquaOS."; exit 1; }
+echo "Comprobación estática del perfil AquaOS completada. No valida los paquetes de Arch ni construye o arranca una ISO."
+
 
