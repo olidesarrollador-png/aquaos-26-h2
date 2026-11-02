@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">AquaOS Deep Current wallpaper concept</title><desc id="desc">An abstract deep black wallpaper with fine glowing aqua current lines and generous space for desktop icons.</desc>
+  <defs><linearGradient id="bg" x2=".85" y2="1"><stop stop-color="#02070a"/><stop offset=".58" stop-color="#04161c"/><stop offset="1" stop-color="#02080b"/></linearGradient><linearGradient id="flow" x2="1" y2=".2"><stop stop-color="#055061" stop-opacity="0"/><stop offset=".34" stop-color="#0a7888"/><stop offset=".68" stop-color="#18d8ce"/><stop offset="1" stop-color="#57f4e5" stop-opacity=".15"/></linearGradient><filter id="blur"><feGaussianBlur stdDeviation="28"/></filter></defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <path d="M-80 840C300 650 470 461 723 520c221 52 296 320 538 253 235-65 351-251 739-203" fill="none" stroke="#03b4b6" stroke-width="86" opacity=".18" filter="url(#blur)"/>
+  <path d="M-80 840C300 650 470 461 723 520c221 52 296 320 538 253 235-65 351-251 739-203" fill="none" stroke="url(#flow)" stroke-width="22" opacity=".86"/>
+  <path d="M-80 882C300 692 470 503 723 562c221 52 296 320 538 253 235-65 351-251 739-203" fill="none" stroke="#8af8ee" stroke-width="2" opacity=".42"/>
+  <path d="M-80 791C300 601 470 412 723 471c221 52 296 320 538 253 235-65 351-251 739-203" fill="none" stroke="#208c9b" stroke-width="3" opacity=".48"/>
+  <path d="M-100 963C282 771 491 590 721 634c221 43 304 267 539 210 241-59 366-228 739-185" fill="none" stroke="#0c6472" stroke-width="2" opacity=".48"/>
+  <circle cx="1118" cy="747" r="8" fill="#8efff3" opacity=".8"/><circle cx="1441" cy="635" r="5" fill="#4eece2" opacity=".62"/><circle cx="871" cy="601" r="4" fill="#88fff4" opacity=".6"/>
+</svg>
+
