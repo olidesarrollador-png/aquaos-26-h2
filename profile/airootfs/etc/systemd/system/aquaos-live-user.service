@@ -1,0 +1,14 @@
+[Unit]
+Description=Create the AquaOS live desktop account
+Before=display-manager.service
+ConditionPathExists=!/var/lib/aquaos/live-user-created
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/useradd --create-home --groups wheel,video,audio,storage --shell /bin/bash aquaos
+ExecStartPost=/usr/bin/install -D -m 0644 /dev/null /var/lib/aquaos/live-user-created
+RemainAfterExit=yes
+
+[Install]
+WantedBy=graphical.target
+
