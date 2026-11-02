@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [[ ${EUID} -ne 0 ]]; then
+  exec sudo "$0" "$@"
+fi
+
+if ! command -v archinstall >/dev/null 2>&1; then
+  printf '\n\033[1;31m AquaOS installer is unavailable\033[0m\n'
+  printf 'The Arch Linux archinstall package was not found.\n\n'
+  read -r -p 'Press Enter to close...'
+  exit 1
+fi
+
+if ! command -v dialog >/dev/null 2>&1; then
+  exec archinstall "$@"
+fi
+
+while true; do
+  choice=$(dialog --clear --backtitle 'AquaOS 26 H2 · Arch Linux' \
+    --title ' AQUAOS 26 H2 ' \
+    --menu '\nWelcome to the AquaOS experimental installer.\n\nThis opens the standard Arch Linux archinstall utility. Review every disk and partition choice carefully.\n' 18 76 5 \
+    install 'Continue to Archinstall' \
+    notes 'Read installation notes' \
+    exit 'Return to desktop' \
+    3>&1 1>&2 2>&3) || exit 0
+
+  case "$choice" in
+    install)
+      clear
+      printf '\033[1;36m\n  AquaOS 26 H2  /  ARCHINSTALL\033[0m\n'
+      printf '  Experimental profile · review the target disk before writing\n\n'
+      exec archinstall "$@"
+      ;;
+    notes)
+      dialog --backtitle 'AquaOS 26 H2 · Arch Linux' --title 'Before installing' \
+        --msgbox 'AquaOS is an experimental Archiso profile. The installer is Arch Linux archinstall; there is no custom AquaOS graphical installer yet. Back up data and test in a virtual machine first.' 12 76
+      ;;
+    exit) exit 0 ;;
+  esac
+done
