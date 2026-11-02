@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 360" role="img" aria-labelledby="title desc">
+  <title id="title">AquaOS 26 H2</title><desc id="desc">A project banner with the AquaOS name and an abstract glowing aqua current on a dark background.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#03090d"/><stop offset=".54" stop-color="#09212a"/><stop offset="1" stop-color="#02090c"/></linearGradient><linearGradient id="wave" x2="1"><stop stop-color="#075366"/><stop offset=".55" stop-color="#19ded2"/><stop offset="1" stop-color="#50fff0"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="20"/></filter></defs>
+  <rect width="1600" height="360" rx="22" fill="url(#bg)"/>
+  <circle cx="1330" cy="173" r="136" fill="#08aaa8" opacity=".22" filter="url(#glow)"/>
+  <path d="M810 316c194-42 237-178 421-173 111 3 205 94 410 27" fill="none" stroke="#0ca1a5" stroke-width="54" opacity=".38" filter="url(#glow)"/>
+  <path d="M810 316c194-42 237-178 421-173 111 3 205 94 410 27" fill="none" stroke="url(#wave)" stroke-width="8" opacity=".9"/>
+  <path d="M839 341c194-42 237-178 421-173 111 3 205 94 410 27" fill="none" stroke="#a3fff4" stroke-width="2" opacity=".58"/>
+  <g transform="translate(82 87)"><path d="M10 84c30-5 38-33 69-33 20 0 28 19 50 19 19 0 30-14 47-14" fill="none" stroke="#28e1d8" stroke-width="8" stroke-linecap="round"/><path d="M10 106c30-5 38-33 69-33 20 0 28 19 50 19 19 0 30-14 47-14" fill="none" stroke="#0a788b" stroke-width="5" stroke-linecap="round"/></g>
+  <text x="82" y="246" fill="#edffff" font-family="Segoe UI,Arial,sans-serif" font-size="65" font-weight="650" letter-spacing="1">AquaOS <tspan fill="#65e8df">26 H2</tspan></text>
+  <text x="87" y="292" fill="#a5c6cb" font-family="Segoe UI,Arial,sans-serif" font-size="21" letter-spacing="5">ARCH LINUX · KDE PLASMA · EXPERIMENTAL PROFILE</text>
+</svg>
