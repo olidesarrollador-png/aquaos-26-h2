@@ -8,7 +8,9 @@
 
 **AquaOS se basa en Arch Linux y KDE Plasma. Este repositorio contiene un perfil experimental de Archiso, no un sistema listo para instalar.**
 
-> **Estado:** todavía no hay una ISO de AquaOS publicada ni validada. El ZIP del proyecto es el código fuente: **no es una imagen de arranque ni se instala directamente**. La ISO se tendrá que publicar aparte.
+> **Estado:** el ZIP contiene un único perfil experimental x86_64. No hay una ISO de AquaOS construida, publicada ni probada; el ZIP del proyecto es código fuente, **no una imagen de arranque ni un instalador**. La ISO se tendrá que publicar aparte.
+
+> **Ediciones:** este archivo no incluye AquaOS Home, Pro, Education ni Server como productos o perfiles independientes. No puedo probar ni anunciar esas ediciones hasta que existan builds separadas y verificables. Las licencias y funciones Pro/Server siguen sin implementarse.
 
 ## Probar AquaOS en Oracle VirtualBox
 
@@ -43,7 +45,7 @@ La instalación solo debe modificar el disco virtual. AquaOS aún no tiene un in
 
 ## Qué es AquaOS
 
-AquaOS 26 H2 es un prototipo de perfil Archiso para un entorno live x86_64 basado en Arch Linux, con KDE Plasma y aplicaciones de escritorio. El repositorio incluye el perfil y el ZIP fuente original; todavía no contiene una ISO publicada, un escritorio propio ni un instalador gráfico terminado.
+AquaOS 26 H2 es un prototipo de perfil Archiso para un entorno live x86_64 basado en Arch Linux, con KDE Plasma y aplicaciones de escritorio. El perfil se configura para arrancar una sesión live de KDE con una cuenta temporal AquaOS. Esa ruta necesita aún una ISO construida y pruebas de arranque; el repositorio no contiene una ISO publicada, un escritorio completamente tematizado ni un instalador gráfico terminado.
 
 ## Componentes y aplicaciones
 
@@ -205,3 +207,4 @@ licenses/                 Estado de licencias y claves
 profile/                  Perfil Archiso y sistema live
 scripts/                  Herramientas de compilación y revisión
 ```
+
