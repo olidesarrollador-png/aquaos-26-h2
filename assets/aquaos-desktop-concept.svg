@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">AquaOS 26 H2 desktop concept</title><desc id="desc">A conceptual KDE-style desktop with a black and aqua wave wallpaper, top panel, dock, terminal and application overview.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#02090f"/><stop offset=".52" stop-color="#061b24"/><stop offset="1" stop-color="#031014"/></linearGradient>
+    <linearGradient id="wave" x2="1" y2=".2"><stop stop-color="#087c91"/><stop offset=".48" stop-color="#12d8d2"/><stop offset="1" stop-color="#0e526a"/></linearGradient>
+    <linearGradient id="glass" x2="0" y2="1"><stop stop-color="#182d37" stop-opacity=".94"/><stop offset="1" stop-color="#09151d" stop-opacity=".97"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="16"/></filter>
+    <filter id="shadow"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1150" cy="430" r="235" fill="#05c7c5" opacity=".18" filter="url(#glow)"/>
+  <path d="M-80 690C260 610 402 421 642 457c220 33 238 260 479 226 181-26 285-174 559-163v380H-80z" fill="#075464" opacity=".65"/>
+  <path d="M-50 776c260-50 437-252 667-240 228 12 272 208 471 192 208-17 305-164 562-165" fill="none" stroke="url(#wave)" stroke-width="28" opacity=".78" filter="url(#glow)"/>
+  <path d="M-50 776c260-50 437-252 667-240 228 12 272 208 471 192 208-17 305-164 562-165" fill="none" stroke="url(#wave)" stroke-width="4" opacity=".94"/>
+  <path d="M-50 808c254-42 412-207 649-198 203 8 274 172 465 156 222-19 334-154 581-145" fill="none" stroke="#8ffaf1" stroke-width="2" opacity=".42"/>
+  <rect y="0" width="1600" height="42" fill="#07131c" opacity=".84"/>
+  <circle cx="25" cy="21" r="8" fill="#20d3cc"/><text x="43" y="26" fill="#d7f8f6" font-family="Segoe UI,Arial" font-size="16" font-weight="600">AquaOS</text>
+  <text x="800" y="26" text-anchor="middle" fill="#a9c2c7" font-family="Segoe UI,Arial" font-size="15">Monday 09:41</text>
+  <text x="1536" y="26" text-anchor="end" fill="#c5e1e2" font-family="Segoe UI,Arial" font-size="14">◉  Wi-Fi   ◖  82%   ◷</text>
+  <text x="80" y="124" fill="#f0ffff" font-family="Segoe UI,Arial" font-size="38" font-weight="300">Good morning.</text>
+  <text x="82" y="157" fill="#8cb0b8" font-family="Segoe UI,Arial" font-size="17">Your workspace, in flow.</text>
+  <rect x="87" y="205" width="552" height="315" rx="19" fill="#000" opacity=".42" filter="url(#shadow)"/>
+  <rect x="77" y="193" width="552" height="315" rx="18" fill="url(#glass)" stroke="#60dcd5" stroke-opacity=".26"/>
+  <path d="M95 193h516a18 18 0 0 1 18 18v30H77v-30a18 18 0 0 1 18-18" fill="#19313a"/>
+  <circle cx="99" cy="216" r="5" fill="#ef817b"/><circle cx="117" cy="216" r="5" fill="#e7c773"/><circle cx="135" cy="216" r="5" fill="#5ac4a6"/>
+  <text x="353" y="220" text-anchor="middle" fill="#c9dedf" font-family="Consolas,monospace" font-size="13">konsole — aquaos</text>
+  <text x="102" y="269" fill="#74e5da" font-family="Consolas,monospace" font-size="15">[liveuser@aquaos ~]$</text>
+  <text x="102" y="302" fill="#e7f1f2" font-family="Consolas,monospace" font-size="16">fastfetch</text>
+  <text x="102" y="342" fill="#b5d4d7" font-family="Consolas,monospace" font-size="15">OS       AquaOS 26 H2 · Arch Linux</text>
+  <text x="102" y="371" fill="#b5d4d7" font-family="Consolas,monospace" font-size="15">Desktop  KDE Plasma · Wayland</text>
+  <text x="102" y="400" fill="#b5d4d7" font-family="Consolas,monospace" font-size="15">Shell    bash</text>
+  <text x="102" y="455" fill="#74e5da" font-family="Consolas,monospace" font-size="15">[liveuser@aquaos ~]$ <tspan fill="#e6ffff">_</tspan></text>
+  <rect x="973" y="193" width="398" height="304" rx="18" fill="url(#glass)" stroke="#60dcd5" stroke-opacity=".26"/>
+  <text x="1005" y="239" fill="#efffff" font-family="Segoe UI,Arial" font-size="23" font-weight="600">Discover</text>
+  <text x="1005" y="266" fill="#8eafb5" font-family="Segoe UI,Arial" font-size="14">A few things to get started</text>
+  <g font-family="Segoe UI,Arial"><rect x="1004" y="293" width="334" height="48" rx="11" fill="#132b34"/><circle cx="1032" cy="317" r="12" fill="#11aeb1"/><text x="1057" y="322" fill="#d7eded" font-size="15">Browse files</text><text x="1316" y="323" fill="#6e929a" font-size="19">›</text>
+  <rect x="1004" y="352" width="334" height="48" rx="11" fill="#132b34"/><circle cx="1032" cy="376" r="12" fill="#086d83"/><text x="1057" y="381" fill="#d7eded" font-size="15">Open terminal</text><text x="1316" y="382" fill="#6e929a" font-size="19">›</text>
+  <rect x="1004" y="411" width="334" height="48" rx="11" fill="#132b34"/><circle cx="1032" cy="435" r="12" fill="#a88743"/><text x="1057" y="440" fill="#d7eded" font-size="15">System settings</text><text x="1316" y="441" fill="#6e929a" font-size="19">›</text></g>
+  <rect x="485" y="823" width="630" height="57" rx="19" fill="#07151e" fill-opacity=".88" stroke="#a7f4ee" stroke-opacity=".17"/>
+  <g font-family="Segoe UI,Arial" font-size="22" text-anchor="middle"><text x="525" y="859">◈</text><text x="581" y="859">▤</text><text x="637" y="859">⌕</text><text x="693" y="859">◉</text><text x="749" y="859">▣</text><text x="805" y="859">♫</text><text x="861" y="859">⌘</text><text x="917" y="859">⚙</text><text x="973" y="859">▱</text><text x="1029" y="859">⏻</text></g>
+</svg>
