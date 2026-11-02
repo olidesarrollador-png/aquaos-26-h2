@@ -19,7 +19,7 @@ fi
 while true; do
   choice=$(dialog --clear --backtitle 'AquaOS 26 H2 · Arch Linux' \
     --title ' AQUAOS 26 H2 ' \
-    --menu '\nWelcome to the AquaOS experimental installer.\n\nThis opens the standard Arch Linux archinstall utility. Review every disk and partition choice carefully.\n' 18 76 5 \
+    --menu $'\nWelcome to the AquaOS experimental installer.\n\nThis opens the standard Arch Linux archinstall utility. Review every disk and partition choice carefully.\n' 18 76 5 \
     install 'Continue to Archinstall' \
     notes 'Read installation notes' \
     exit 'Return to desktop' \
@@ -39,3 +39,4 @@ while true; do
     exit) exit 0 ;;
   esac
 done
+
