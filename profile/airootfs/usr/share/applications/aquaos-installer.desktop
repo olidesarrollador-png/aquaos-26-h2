@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Install AquaOS 26 H2
+GenericName=Experimental system installer
+Comment=Open the Arch Linux installer from the AquaOS live environment
+Exec=konsole -e sudo /usr/local/bin/aquaos-installer
+Icon=system-software-install
+Terminal=false
+Categories=System;
+StartupNotify=true
