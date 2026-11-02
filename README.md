@@ -34,6 +34,8 @@ sudo ./scripts/check-profile.sh
 sudo ./scripts/build-iso.sh
 ```
 
+The package list lives in `profile/packages.x86_64`; edit it to change the image contents. `profile/pacman.conf` includes the `multilib` repository used for Steam.
+
 The ISO is written to `out/`; temporary build files go to `work/`. The first build downloads packages and can take a while. Steam and LibreOffice make the image large. Keep both directories out of version control.
 
 The build wrapper creates the SDDM and NetworkManager systemd enablement symlinks for the profile overlay, then removes those temporary links when the build exits. This also avoids relying on Windows ZIP extraction to preserve Unix symlinks.
@@ -81,4 +83,5 @@ scripts/check-profile.sh Basic profile consistency checks
 ## License and third-party software
 
 The repository's configuration files are provided for experimentation under the included license notice. Arch Linux, KDE Plasma, Steam, Ollama, Google Chrome, and other bundled or referenced components are governed by their respective upstream licenses and terms. AquaOS does not imply endorsement by those projects.
+
 
