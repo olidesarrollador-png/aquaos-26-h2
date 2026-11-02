@@ -1,6 +1,6 @@
 # AquaOS 26 H2
 
-**FUNDED BY QUACK LABS AND FLX**
+## **FUNDED BY QUACK LABS AND FLX**
 
 **COMMERCIAL USE WARNING: Contact Oli Desarrollador at [olidesarrollador@gmail.com](mailto:olidesarrollador@gmail.com) before using AquaOS for commercial purposes.**
 **An experimental Arch Linux based desktop profile from Quack Labs.**
@@ -168,5 +168,7 @@ libreoffice-fresh
 ## License and third-party software
 
 The repository's configuration files are provided for experimentation under the included license notice. Arch Linux, KDE Plasma, Steam, Ollama, Google Chrome, and other bundled or referenced components are governed by their respective upstream licenses and terms. AquaOS does not imply endorsement by those projects.
+
+
 
 
