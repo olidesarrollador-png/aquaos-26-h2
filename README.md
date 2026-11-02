@@ -1,110 +1,68 @@
 # AquaOS 26 H2
 
-![AquaOS 26 H2 project banner](assets/aquaos-banner.svg)
+![Portada del proyecto AquaOS 26 H2](assets/aquaos-banner.svg)
 
-## **FUNDED BY QUACK LABS AND FLX**
+## **FINANCIADO POR QUACK LABS Y FLX**
 
-**COMMERCIAL USE WARNING: Contact Oli Desarrollador at [olidesarrollador@gmail.com](mailto:olidesarrollador@gmail.com) before using AquaOS for commercial purposes.**
+**ADVERTENCIA DE USO COMERCIAL: Antes de utilizar AquaOS con fines comerciales, contacta con Oli Desarrollador en [olidesarrollador@gmail.com](mailto:olidesarrollador@gmail.com).**
 
-**An experimental Arch Linux based desktop profile from Quack Labs.**
+**AquaOS se basa en Arch Linux y KDE Plasma. Este repositorio contiene un perfil experimental de Archiso, no un sistema listo para instalar.**
 
-> **Project status:** prototype Archiso profile. AquaOS is not a finished operating system or a production ready ISO. The profile has not yet been built and validated end to end on a supported Arch Linux host. Treat any resulting image as experimental and test it in a virtual machine.
+> **Estado:** todavía no hay una ISO de AquaOS publicada ni validada. El ZIP del proyecto es el código fuente: **no es una imagen de arranque ni se instala directamente**. La ISO se tendrá que publicar aparte.
 
-## What AquaOS is
+## Probar AquaOS en Oracle VirtualBox
 
-AquaOS 26 H2 is an early project for shaping an Arch Linux based desktop around KDE Plasma, gaming, developer tools, and a future AquaOS visual identity. This repository contains a build profile and scripts. It does not contain a released ISO, a custom desktop environment, or a finished graphical installer.
+### Descargas
 
-The current profile targets **x86_64 UEFI** systems. Package versions come from the Arch repositories at build time, so repeat builds can differ.
+- **Proyecto completo en ZIP:** [descargar AquaOS desde GitHub](https://github.com/olidesarrollador-png/aquaos-26-h2/archive/refs/heads/main.zip). Incluye el perfil y los archivos fuente; no es el sistema arrancable.
+- **ISO de AquaOS para VirtualBox:** todavía no disponible. No hay un archivo ISO real que enlazar: el perfil aún no se ha construido ni probado. Cuando exista una ISO comprobada, se publicará por separado en [Versiones de AquaOS](https://github.com/olidesarrollador-png/aquaos-26-h2/releases).
+- **Oracle VirtualBox:** descárgalo desde la [página oficial de Oracle](https://www.oracle.com/virtualization/technologies/vm/downloads/virtualbox-downloads.html).
 
-## Included in the profile
+No uses el ZIP como si fuera la ISO ni lo flashees en un pendrive.
 
-- Arch Linux live system with the Linux kernel and firmware.
-- KDE Plasma desktop, SDDM, Konsole, Dolphin, and common desktop utilities.
-- Steam, subject to the Arch `multilib` repository being enabled in the build configuration.
-- Ollama package only. No model is downloaded or bundled, and no AI agent or chatbot is included.
-- Google Chrome is the intended default browser, but it is **not currently installed or configured as the default**. The Arch package is distributed through the AUR and is not available to the standard `mkarchiso` package list. Install it manually after installing Arch, using a trusted AUR helper or by reviewing and building the `google-chrome` AUR package as a normal user.
-- Basic AquaOS identity metadata and a small KWin configuration. These are early defaults, not a complete branded theme or custom desktop.
+### Crear la máquina virtual cuando se publique la ISO
 
-## Visual direction and planned features
+1. Abre VirtualBox y selecciona **Nueva**.
+2. Ponle el nombre **AquaOS 26 H2** y elige **Linux → Arch Linux (64 bits)**.
+3. Asigna al menos **4 GB de RAM** y **2 procesadores** si el equipo lo permite.
+4. Crea un disco VDI virtual de **40 GB o más**, reservado dinámicamente.
+5. En la configuración de la VM, activa **EFI** para el arranque UEFI del perfil.
+6. En **Almacenamiento**, monta la ISO de AquaOS y guarda los cambios.
+7. Inicia la VM y prueba primero el escritorio live. En KDE, **Instalar AquaOS 26 H2** abre la bienvenida de AquaOS y después la utilidad estándar de Arch Linux, `archinstall`.
 
-The visual direction is a dark, OLED-friendly KDE desktop with deep black surfaces, aqua/cyan accents, restrained transparency, and soft window transitions. The images below are hand-built **vector concept art**, not screenshots of a running AquaOS image.
+La instalación solo debe modificar el disco virtual. AquaOS aún no tiene un instalador gráfico propio y su proceso completo de instalación no está validado. No lo instales en un disco real con datos importantes.
 
-### AquaOS desktop concept
+### Crear un pendrive de arranque cuando se publique la ISO
 
-![AquaOS desktop concept artwork](assets/aquaos-desktop-concept.svg)
+1. Descarga la ISO de AquaOS y una herramienta de escritura, como [Rufus](https://rufus.ie/) o [balenaEtcher](https://etcher.balena.io/).
+2. Conecta un pendrive vacío y selecciónalo en la herramienta.
+3. Selecciona la **ISO de AquaOS** y escribe la imagen.
+4. Arranca el ordenador desde el pendrive con el menú de arranque UEFI.
 
-*Concept only. The current profile still uses stock KDE Plasma with starter KWin settings.*
+**La escritura borra el contenido del pendrive. Guarda antes los archivos que quieras conservar.** No descomprimas la ISO ni copies el ZIP al pendrive: la herramienta debe escribir la ISO como imagen de arranque.
 
-### Proposed wallpaper concepts
+## Qué es AquaOS
 
-![AquaOS deep current wallpaper concept](assets/aquaos-wallpaper-deep-current.svg)
+AquaOS 26 H2 es un prototipo de perfil Archiso para un entorno live x86_64 basado en Arch Linux, con KDE Plasma y aplicaciones de escritorio. El repositorio incluye el perfil y el ZIP fuente original; todavía no contiene una ISO publicada, un escritorio propio ni un instalador gráfico terminado.
 
-![AquaOS orbital wallpaper concept](assets/aquaos-wallpaper-orbit.svg)
+## Componentes y aplicaciones
 
-*Proposed wallpapers only; neither is installed in the current profile.*
+- **Sistema base:** Arch Linux, kernel Linux, firmware y entorno live de Archiso.
+- **Escritorio:** KDE Plasma, KWin, SDDM, Dolphin, Ark, Kate y Preferencias del sistema.
+- **Terminal:** Konsole.
+- **Juegos:** Steam; necesita `multilib` habilitado en la configuración de compilación.
+- **IA local:** Ollama instalado sin modelos, agente ni chatbot.
+- **Navegador:** Google Chrome es el navegador previsto, pero no está incluido ni configurado como predeterminado. La versión de Arch se distribuye mediante AUR; instalarlo no forma parte del perfil actual.
+- **Instalación:** una bienvenida de AquaOS abre `archinstall`. Las particiones y la instalación las gestiona Arch Linux, no un instalador AquaOS propio.
 
-### Terminal and installer concept
+La selección completa está en [`profile/packages.x86_64`](profile/packages.x86_64); aún no se ha verificado en una ISO construida.
 
-![AquaOS terminal and installer concept artwork](assets/aquaos-terminal-installer-concept.svg)
-
-*Concept art. Konsole is included. The actual live image opens Arch Linux `archinstall` from an AquaOS-branded terminal welcome screen.*
-
-The profile currently includes KDE Plasma, KWin, Konsole, starter settings for blur, contrast, fade, and slide effects, and an AquaOS-branded launcher for `archinstall`. A custom graphical installer, dock, control center, branded desktop theme, and installed wallpaper collection remain future work.
-
-## Build on Arch Linux
-
-Build from an up-to-date x86_64 Arch Linux installation with internet access. The image build uses Arch repositories and requires root privileges for `mkarchiso`.
-
-```bash
-sudo pacman -Syu
-sudo pacman -S --needed git archiso
-git clone https://github.com/olidesarrollador-png/aquaos-26-h2.git
-cd aquaos-26-h2
-sudo ./scripts/check-profile.sh
-sudo ./scripts/build-iso.sh
-```
-
-The package list lives in `profile/packages.x86_64`; edit it to change the image contents. `profile/pacman.conf` includes the `multilib` repository used for Steam.
-
-The ISO is written to `out/`; temporary build files go to `work/`. The first build downloads packages and can take a while. Steam and LibreOffice make the image large. Keep both directories out of version control.
-
-The build wrapper creates the SDDM and NetworkManager systemd enablement symlinks for the profile overlay, then removes those temporary links when the build exits. This also avoids relying on Windows ZIP extraction to preserve Unix symlinks.
-
-The live desktop includes an AquaOS-branded installer entry with a welcome and safety notes, then opens Arch Linux `archinstall`. Disk partitioning and installation remain in `archinstall`; there is no custom AquaOS graphical installer. The profile has not yet been validated as a complete install workflow.
-
-## Windows
-
-Use an x86_64 Arch Linux virtual machine for building and testing. Give the VM enough disk space for the package cache, working tree, and ISO output. Clone this repository inside the Arch VM and follow the Arch build commands above.
-
-WSL2 can be useful for editing files. Building through WSL2 may depend on loop-device, mount, and privilege support in the particular WSL setup, so a full Arch Linux VM is the recommended route for building the ISO and testing its boot behavior. Test the ISO in a VM; do not install the prototype on a Windows host or real disk.
-
-## Intel Mac
-
-On an Intel Mac, use an x86_64 Arch Linux virtual machine to build or test the image. Follow the Arch Linux instructions inside that VM. This is experimental and does not promise native Mac hardware support, Wi-Fi, graphics acceleration, or a working boot on every Intel Mac.
-
-**Apple Silicon Macs are not supported by this x86_64 image.**
-
-## Linux testing and installation guidance
-
-On an x86_64 Linux host, use a virtual machine to boot the ISO first. Verify that the live desktop starts, networking and audio work, and the included applications launch before considering further use.
-
-Choose **Install AquaOS 26 H2** from the KDE application menu to open the branded welcome screen and launch `archinstall`. Review its disk and partition selections yourself. The profile has no custom graphical AquaOS installer and no tested production installation path. Do not install on a machine or disk containing data you need.
-
-## Applications and packages declared in the profile
-
-This is the profile's package selection, not a verified list from a completed ISO.
-
-- **Desktop and terminal:** KDE Plasma (`plasma-desktop`, `plasma-workspace`), KWin, SDDM, Konsole, Dolphin, Ark, Kate, System Settings, Plasma Network and Audio integrations.
-- **User applications:** Steam, Ollama (no models and no AI agent), VLC, LibreOffice Fresh, Flatpak.
-- **Tools and services:** NetworkManager, OpenSSH, dialog (installer welcome screen), PipeWire audio, Bluetooth utilities, CUPS, UDisks, power-profiles-daemon, fwupd, Git, curl, wget, rsync, zip/unzip, nano, Vim, htop, Fastfetch.
-- **Graphics and display stack:** Mesa, Vulkan loader, Wayland, Xorg, XWayland, Qt Wayland, KDE XDG desktop portal.
-- **Chrome:** not included. It remains the intended browser choice, but it must be installed from the AUR after installation and is not configured as the default.
-- **GRUB:** included for the live ISO's UEFI boot path; it is a boot component, not a desktop application.
+Incluye también Mesa y Vulkan, Wayland, Xorg y XWayland, Qt Wayland, portales KDE, PipeWire y WirePlumber, Bluetooth, CUPS, UDisks, administración de energía, fwupd, OpenSSH, NetworkManager, Git, curl, wget, rsync, zip/unzip, nano, Vim, htop, Fastfetch, GRUB y herramientas de Archiso. Esta lista describe el perfil, no confirma que una ISO ya los incluya correctamente.
 
 <details>
-<summary>Full package list declared in profile/packages.x86_64</summary>
+<summary>Lista exacta de paquetes del perfil</summary>
 
-<pre>
+```text
 base
 linux
 linux-firmware
@@ -160,35 +118,90 @@ ollama
 grub
 vlc
 libreoffice-fresh
-</pre>
+```
 
 </details>
 
-## AquaOS free and Pro licenses
+## Apariencia prevista
 
-The current prototype has no license checks, paid feature locks, or AquaOS activation keys. It can be built and tested without an AquaOS key. The free license and AquaOS Pro are planned product tiers, but no license service or key format exists yet. AquaOS Pro is in development; its proposed one-time USD 9 price and coverage of AquaOS 26 H2, AquaOS 27 H2, and later versions are plans only, not an offer for sale. AquaOS Server and its keys are not part of this prototype. See [license and key status](licenses/README.md). This repository will be the place to publish official licensing instructions if that system is implemented.
+Las ilustraciones son **arte vectorial conceptual**, no capturas de AquaOS ejecutándose. El perfil actual usa KDE Plasma estándar con ajustes iniciales de KWin.
 
-## Repository layout
+### Concepto del escritorio
 
-```text
-artifacts/original/       User-provided source ZIP, retained unchanged
-assets/                   Hand-built SVG visual concepts
-licenses/                 Current licensing and key status
-profile/                  Archiso profile and live root filesystem overlay
-scripts/build-iso.sh      mkarchiso build wrapper
-scripts/check-profile.sh  Basic profile consistency checks
+![Concepto visual del escritorio AquaOS](assets/aquaos-desktop-concept.svg)
+
+### Fondos de pantalla propuestos
+
+![Concepto de fondo AquaOS Deep Current](assets/aquaos-wallpaper-deep-current.svg)
+
+![Concepto de fondo AquaOS Orbit](assets/aquaos-wallpaper-orbit.svg)
+
+*Son propuestas visuales; todavía no están instaladas como fondos del sistema.*
+
+### Terminal e instalación
+
+![Concepto de terminal y bienvenida del instalador](assets/aquaos-terminal-installer-concept.svg)
+
+*Konsole sí está en el perfil. La imagen del instalador es conceptual: la herramienta real es `archinstall`.*
+
+El perfil aún no incluye dock propio, centro de control, tema completo, colección de fondos instalada o instalador gráfico AquaOS.
+
+## Licencias AquaOS y claves
+
+El prototipo no comprueba licencias, bloquea funciones ni requiere claves. La licencia gratuita y AquaOS Pro son planes de producto, pero todavía no existe un sistema de emisión o validación. AquaOS Pro sigue en desarrollo; el precio único previsto de 9 USD y su cobertura para AquaOS 26 H2, AquaOS 27 H2 y versiones futuras no están disponibles para compra. AquaOS Server y sus claves tampoco forman parte de este prototipo.
+
+No se han inventado claves: un código publicado en un repositorio público no es secreto ni irreplicable. Consulta el [estado de licencias y claves](licenses/README.md). Este mismo repositorio publicará instrucciones oficiales si se desarrolla ese sistema. Arch Linux, KDE Plasma, Steam, Ollama y las demás aplicaciones mantienen sus propias licencias y condiciones.
+
+## Windows y Mac
+
+- **Windows:** usa VirtualBox para probar la ISO cuando se publique. Para compilar desde el perfil fuente, se recomienda una VM Arch Linux x86_64. WSL2 puede servir para editar, pero no se garantiza que pueda construir o arrancar esta ISO.
+- **Mac Intel:** usa una VM Arch Linux x86_64; no se garantiza compatibilidad nativa con el hardware de cada Mac.
+- **Apple Silicon:** los Mac con Apple Silicon no son compatibles con esta imagen x86_64.
+
+## Compilar la ISO (opcional, para desarrolladores)
+
+Las instrucciones de uso normal no requieren comandos: se descargará la ISO publicada en [Versiones](https://github.com/olidesarrollador-png/aquaos-26-h2/releases) y se abrirá en VirtualBox o se escribirá en un pendrive. Compilar desde el perfil fuente sí requiere Arch Linux y herramientas de desarrollo:
+
+<details>
+<summary>Instrucciones técnicas de compilación en Arch Linux</summary>
+
+```bash
+sudo pacman -Syu
+sudo pacman -S --needed git archiso
+git clone https://github.com/olidesarrollador-png/aquaos-26-h2.git
+cd aquaos-26-h2
+sudo ./scripts/check-profile.sh
+sudo ./scripts/build-iso.sh
 ```
 
-## Known limitations
+La salida queda en `out/` y los temporales en `work/`. La compilación necesita Internet y no se ha ejecutado ni validado todavía.
 
-- No ISO has been released or verified by CI.
-- No custom AquaOS desktop environment or graphical installer exists yet; the menu entry launches Arch Linux `archinstall`.
-- No low-RAM target, animation design, hardware compatibility, or gaming performance claim has been measured.
-- Chrome is not in the live image and is not automatically selected as the default browser.
-- Ollama has no model, agent, or chat interface included.
-- AquaOS free/Pro/Server license activation and key issuance are not implemented.
-- The live desktop and install flow still need an end-to-end build and VM validation pass.
+</details>
 
-## License and third-party software
+## Descargas del proyecto
 
-The repository's configuration files are provided for experimentation under the included license notice. Arch Linux, KDE Plasma, Steam, Ollama, Google Chrome, and other bundled or referenced components are governed by their respective upstream licenses and terms. AquaOS does not imply endorsement by those projects.
+- [Descargar todos los archivos del proyecto en ZIP](https://github.com/olidesarrollador-png/aquaos-26-h2/archive/refs/heads/main.zip)
+- [Consultar o descargar archivos fuente](https://github.com/olidesarrollador-png/aquaos-26-h2)
+- [Consultar futuras versiones e ISO](https://github.com/olidesarrollador-png/aquaos-26-h2/releases)
+
+El ZIP contiene el perfil, scripts y arte conceptual. No sustituye la ISO ni arranca en VirtualBox o desde un pendrive.
+
+## Limitaciones actuales
+
+- No se ha publicado, compilado ni probado una ISO de AquaOS.
+- La opción del menú abre `archinstall`; no hay instalador gráfico propio.
+- No se han medido RAM, compatibilidad de hardware ni rendimiento de juegos.
+- Chrome no está instalado ni seleccionado como navegador predeterminado.
+- Ollama no incluye modelos ni agente de IA.
+- Las licencias gratuitas/Pro/Server y sus claves no están implementadas.
+- Los fondos de pantalla conceptuales no forman parte del sistema instalado.
+
+## Estructura del repositorio
+
+```text
+artifacts/original/       ZIP fuente original
+assets/                   Banner e ilustraciones vectoriales conceptuales
+licenses/                 Estado de licencias y claves
+profile/                  Perfil Archiso y sistema live
+scripts/                  Herramientas de compilación y revisión
+```
