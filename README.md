@@ -45,7 +45,7 @@ La instalación solo debe modificar el disco virtual. AquaOS aún no tiene un in
 
 ## Qué es AquaOS
 
-AquaOS 26 H2 es un prototipo de perfil Archiso para un entorno live x86_64 basado en Arch Linux, con KDE Plasma y aplicaciones de escritorio. El perfil se configura para arrancar una sesión live de KDE con una cuenta temporal AquaOS. Esa ruta necesita aún una ISO construida y pruebas de arranque; el repositorio no contiene una ISO publicada, un escritorio completamente tematizado ni un instalador gráfico terminado.
+AquaOS 26 H2 es un prototipo de perfil Archiso para un entorno live x86_64 basado en Arch Linux, con KDE Plasma y aplicaciones de escritorio. El perfil prepara una sesión live de KDE con una cuenta temporal AquaOS. Esa ruta necesita aún una ISO construida y pruebas de arranque; el repositorio no contiene una ISO publicada, un escritorio independiente ni un instalador gráfico terminado.
 
 ## Componentes y aplicaciones
 
@@ -126,7 +126,7 @@ libreoffice-fresh
 
 ## Apariencia prevista
 
-Las ilustraciones son **arte vectorial conceptual**, no capturas de AquaOS ejecutándose. El perfil actual usa KDE Plasma estándar con ajustes iniciales de KWin.
+Las ilustraciones son **arte vectorial conceptual**, no capturas de AquaOS ejecutándose. La configuración actual prepara un fondo AquaOS, una barra inferior de Plasma con lanzador, tareas centradas y widgets estándar, más efectos de desenfoque y translucidez de KWin. Es una personalización inicial de KDE, no un clon de macOS; falta construir la ISO y comprobar visualmente la sesión.
 
 ### Concepto del escritorio
 
@@ -146,7 +146,7 @@ Las ilustraciones son **arte vectorial conceptual**, no capturas de AquaOS ejecu
 
 *Konsole sí está en el perfil. La imagen del instalador es conceptual: la herramienta real es `archinstall`.*
 
-El perfil aún no incluye dock propio, centro de control, tema completo, colección de fondos instalada o instalador gráfico AquaOS.
+El perfil no incluye aún un dock independiente, centro de control AquaOS, tema completo ni instalador gráfico propio. El único fondo añadido es el concepto Deep Current.
 
 ## Licencias AquaOS y claves
 
