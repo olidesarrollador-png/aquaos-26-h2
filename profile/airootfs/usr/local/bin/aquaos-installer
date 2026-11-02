@@ -6,9 +6,9 @@ if [[ ${EUID} -ne 0 ]]; then
 fi
 
 if ! command -v archinstall >/dev/null 2>&1; then
-  printf '\n\033[1;31m AquaOS installer is unavailable\033[0m\n'
-  printf 'The Arch Linux archinstall package was not found.\n\n'
-  read -r -p 'Press Enter to close...'
+  printf '\n\033[1;31m El instalador de AquaOS no está disponible\033[0m\n'
+  printf 'No se encontró el paquete archinstall de Arch Linux.\n\n'
+  read -r -p 'Pulsa Intro para cerrar...'
   exit 1
 fi
 
@@ -19,24 +19,23 @@ fi
 while true; do
   choice=$(dialog --clear --backtitle 'AquaOS 26 H2 · Arch Linux' \
     --title ' AQUAOS 26 H2 ' \
-    --menu $'\nWelcome to the AquaOS experimental installer.\n\nThis opens the standard Arch Linux archinstall utility. Review every disk and partition choice carefully.\n' 18 76 5 \
-    install 'Continue to Archinstall' \
-    notes 'Read installation notes' \
-    exit 'Return to desktop' \
+    --menu $'\nTe damos la bienvenida al instalador experimental de AquaOS.\n\nSe abrirá la utilidad estándar archinstall de Arch Linux. Revisa cuidadosamente el disco y las particiones antes de continuar.\n' 18 76 5 \
+    instalar 'Continuar con archinstall' \
+    notas 'Leer las notas de instalación' \
+    salir 'Volver al escritorio' \
     3>&1 1>&2 2>&3) || exit 0
 
   case "$choice" in
-    install)
+    instalar)
       clear
       printf '\033[1;36m\n  AquaOS 26 H2  /  ARCHINSTALL\033[0m\n'
-      printf '  Experimental profile · review the target disk before writing\n\n'
+      printf '  Perfil experimental · revisa el disco antes de escribir\n\n'
       exec archinstall "$@"
       ;;
-    notes)
-      dialog --backtitle 'AquaOS 26 H2 · Arch Linux' --title 'Before installing' \
-        --msgbox 'AquaOS is an experimental Archiso profile. The installer is Arch Linux archinstall; there is no custom AquaOS graphical installer yet. Back up data and test in a virtual machine first.' 12 76
+    notas)
+      dialog --backtitle 'AquaOS 26 H2 · Arch Linux' --title 'Antes de instalar' \
+        --msgbox 'AquaOS es un perfil Archiso experimental. El instalador es archinstall de Arch Linux; todavía no existe un instalador gráfico propio de AquaOS. Haz una copia de seguridad y prueba primero en una máquina virtual.' 12 76
       ;;
-    exit) exit 0 ;;
+    salir) exit 0 ;;
   esac
 done
-
