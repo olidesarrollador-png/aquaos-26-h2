@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [[ "${EUID}" -ne 0 ]]; then
+  echo "Ejecuta este script con sudo."
+  exit 1
+fi
+
+echo "Configuración inicial de AquaOS 26 H2"
+echo "Ollama está instalado; no se descargará ningún modelo."
+systemctl enable ollama.service
+
+if ! command -v yay >/dev/null 2>&1; then
+  echo
+  echo "Google Chrome se distribuye mediante AUR (paquete google-chrome)."
+  echo "Para instalarlo, inicia sesión con tu usuario normal y ejecuta:"
+  echo "  git clone https://aur.archlinux.org/google-chrome.git"
+  echo "  cd google-chrome && makepkg -si"
+  echo
+fi
+
+echo "AquaOS: configuración básica completada."

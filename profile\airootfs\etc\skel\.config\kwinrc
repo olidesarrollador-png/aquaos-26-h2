@@ -1,0 +1,8 @@
+[Plugins]
+blurEnabled=true
+contrastEnabled=true
+fadeEnabled=true
+slideEnabled=true
+
+[Windows]
+BorderlessMaximizedWindows=true

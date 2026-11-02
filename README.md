@@ -82,4 +82,3 @@ scripts/check-profile.sh Basic profile consistency checks
 
 The repository's configuration files are provided for experimentation under the included license notice. Arch Linux, KDE Plasma, Steam, Ollama, Google Chrome, and other bundled or referenced components are governed by their respective upstream licenses and terms. AquaOS does not imply endorsement by those projects.
 
-
