@@ -3,6 +3,27 @@ blurEnabled=true
 contrastEnabled=true
 fadeEnabled=true
 slideEnabled=true
+translucencyEnabled=true
+
+[Compositing]
+AnimationSpeed=3
+Backend=OpenGL
+GLCore=true
+GLPreferBufferSwap=a
+MaxFPS=60
+OpenGLIsUnsafe=false
+WindowsBlock=false
+XRenderSmoothScale=false
+
+[Effect-Blur]
+BlurStrength=10
+NoiseStrength=2
+
+[Effect-Contrast]
+Contrast=0.2
+Intensity=0.4
+Saturation=1.7
 
 [Windows]
 BorderlessMaximizedWindows=true
+
