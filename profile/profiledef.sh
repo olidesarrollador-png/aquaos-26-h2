@@ -12,4 +12,5 @@ airootfs_image_type="squashfs"
 
 file_permissions=(
   ["/usr/local/bin/aquaos-first-boot"]="0:0:755"
+  ["/usr/local/bin/aquaos-installer"]="0:0:755"
 )
