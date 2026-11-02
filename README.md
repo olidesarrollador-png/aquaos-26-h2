@@ -1,5 +1,7 @@
 # AquaOS 26 H2
 
+![AquaOS 26 H2 project banner](assets/aquaos-banner.svg)
+
 ## **FUNDED BY QUACK LABS AND FLX**
 
 **COMMERCIAL USE WARNING: Contact Oli Desarrollador at [olidesarrollador@gmail.com](mailto:olidesarrollador@gmail.com) before using AquaOS for commercial purposes.**
