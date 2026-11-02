@@ -1,5 +1,8 @@
 # AquaOS 26 H2
 
+**FUNDED BY QUACK LABS AND FLX**
+
+**COMMERCIAL USE WARNING: Contact Oli Desarrollador at [olidesarrollador@gmail.com](mailto:olidesarrollador@gmail.com) before using AquaOS for commercial purposes.**
 **An experimental Arch Linux based desktop profile from Quack Labs.**
 
 > **Project status:** prototype Archiso profile. AquaOS is not a finished operating system or a production ready ISO. The profile has not yet been built and validated end to end on a supported Arch Linux host. Treat any resulting image as experimental and test it in a virtual machine.
@@ -21,6 +24,15 @@ The current profile targets **x86_64 UEFI** systems. Package versions come from 
 
 The optional `aquaos-first-boot` helper enables the Ollama service when run as root and prints Chrome setup guidance. It does not download models or install Chrome automatically.
 
+## Visual direction and planned features
+
+> The images in this section are intended to be **concept art**, not screenshots of a finished AquaOS desktop. No AquaOS ISO or custom desktop has been validated yet.
+
+The visual direction is a dark, OLED-friendly KDE desktop with deep black surfaces, aqua/cyan accents, restrained transparency, and soft window transitions. The concept is intended to feel like AquaOS while remaining a KDE Plasma profile.
+
+The profile currently includes Konsole as its terminal, KDE Plasma and KWin, and starter KWin settings for blur, contrast, fade, and slide effects. A custom dock, control center, branded launcher, finished theme, and AquaOS wallpaper collection are **ideas for future work**; they are not implemented in this prototype.
+
+The current project archive contains **no AquaOS wallpapers**. Any future wallpaper images should be treated as proposed designs until they are added to the profile and tested in a built image.
 ## Build on Arch Linux
 
 Build from an up-to-date x86_64 Arch Linux installation with internet access. The image build uses Arch repositories and requires root privileges for `mkarchiso`.
@@ -70,6 +82,79 @@ profile/grub/            UEFI GRUB menu
 scripts/build-iso.sh     mkarchiso build wrapper
 scripts/check-profile.sh Basic profile consistency checks
 ```
+
+## Applications and packages declared in the profile
+
+The list below is the profile's package selection, not a verified list from a completed ISO. The image still needs to be built before any package can be confirmed as working in the live environment.
+
+- **Desktop and terminal:** KDE Plasma (plasma-desktop, plasma-workspace), KWin, SDDM, Konsole, Dolphin, Ark, Kate, System Settings, Plasma Network and Audio integrations.
+- **User applications:** Steam, Ollama (no models and no AI agent), VLC, LibreOffice Fresh, Flatpak.
+- **Tools and services:** NetworkManager, OpenSSH, PipeWire audio, Bluetooth utilities, CUPS, UDisks, power-profiles-daemon, fwupd, Git, curl, wget, rsync, zip/unzip, nano, Vim, htop, Fastfetch.
+- **Graphics and display stack:** Mesa, Vulkan loader, Wayland, Xorg, XWayland, Qt Wayland, KDE XDG desktop portal.
+- **Chrome:** not included. It remains the intended browser choice, but it must be installed from the AUR after installation and is not currently configured as the default.
+- **GRUB:** included for the live ISO's UEFI boot path; it is a boot component, not a desktop application.
+
+<details>
+<summary>Full package list declared in profile/packages.x86_64</summary>
+
+<pre>
+base
+linux
+linux-firmware
+mkinitcpio
+mkinitcpio-archiso
+archinstall
+sudo
+networkmanager
+openssh
+plasma-desktop
+plasma-workspace
+kwin
+sddm
+konsole
+dolphin
+ark
+kate
+systemsettings
+plasma-nm
+plasma-pa
+xdg-desktop-portal
+xdg-desktop-portal-kde
+qt6-wayland
+wayland
+xorg-server
+xorg-xwayland
+mesa
+vulkan-icd-loader
+pipewire
+pipewire-alsa
+pipewire-pulse
+wireplumber
+bluez
+bluez-utils
+cups
+udisks2
+power-profiles-daemon
+fwupd
+git
+curl
+wget
+rsync
+unzip
+zip
+nano
+vim
+htop
+fastfetch
+flatpak
+steam
+ollama
+grub
+vlc
+libreoffice-fresh
+</pre>
+
+</details>
 
 ## Known limitations
 
