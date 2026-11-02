@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">AquaOS terminal and installer concept</title><desc id="desc">A concept illustration of a KDE desktop with Konsole and an AquaOS-styled terminal installer welcome dialog.</desc>
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#06151c"/><stop offset="1" stop-color="#020709"/></linearGradient><linearGradient id="panel" x2="0" y2="1"><stop stop-color="#152c35"/><stop offset="1" stop-color="#09141b"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="26"/></filter></defs>
+  <rect width="1600" height="900" fill="url(#bg)"/><ellipse cx="1160" cy="720" rx="430" ry="160" fill="#00b9b5" opacity=".15" filter="url(#glow)"/>
+  <rect width="1600" height="42" fill="#07131c"/><circle cx="25" cy="21" r="8" fill="#20d3cc"/><text x="45" y="27" fill="#d8f5f4" font-family="Segoe UI,Arial" font-size="16">AquaOS</text><text x="800" y="27" fill="#a9c2c7" text-anchor="middle" font-family="Segoe UI,Arial" font-size="15">Terminal workspace</text>
+  <rect x="108" y="109" width="1384" height="677" rx="22" fill="#000" opacity=".55"/>
+  <rect x="98" y="96" width="1384" height="677" rx="22" fill="url(#panel)" stroke="#57ddd4" stroke-opacity=".36"/>
+  <path d="M120 96h1340a22 22 0 0 1 22 22v54H98v-54a22 22 0 0 1 22-22" fill="#1a333d"/>
+  <circle cx="128" cy="125" r="6" fill="#ec8179"/><circle cx="150" cy="125" r="6" fill="#e4c77b"/><circle cx="172" cy="125" r="6" fill="#56c4a5"/>
+  <text x="790" y="132" text-anchor="middle" fill="#d5eded" font-family="Segoe UI,Arial" font-size="16">AquaOS 26 H2 · Installer</text>
+  <text x="148" y="211" fill="#71e4dc" font-family="Consolas,monospace" font-size="16">liveuser@aquaos:~$</text><text x="377" y="211" fill="#e6f1f1" font-family="Consolas,monospace" font-size="16">sudo aquaos-installer</text>
+  <rect x="267" y="274" width="1066" height="386" rx="17" fill="#02090d" stroke="#21c8c1" stroke-opacity=".75"/>
+  <path d="M284 274h1032a17 17 0 0 1 17 17v47H267v-47a17 17 0 0 1 17-17" fill="#0a2731"/>
+  <text x="800" y="316" text-anchor="middle" fill="#e7ffff" font-family="Segoe UI,Arial" font-size="23" font-weight="700">A Q U A O S   2 6   H 2</text>
+  <text x="322" y="383" fill="#d8eeee" font-family="Segoe UI,Arial" font-size="20">Welcome to the AquaOS experimental installer.</text>
+  <text x="322" y="426" fill="#9ab9be" font-family="Segoe UI,Arial" font-size="17">This opens the standard Arch Linux archinstall utility.</text>
+  <text x="322" y="457" fill="#9ab9be" font-family="Segoe UI,Arial" font-size="17">Review every disk and partition choice carefully.</text>
+  <rect x="322" y="497" width="951" height="1" fill="#21434c"/>
+  <rect x="365" y="530" width="275" height="58" rx="9" fill="#0b9c9d"/><text x="503" y="566" text-anchor="middle" fill="#f2ffff" font-family="Segoe UI,Arial" font-size="17" font-weight="600">Continue to Archinstall</text>
+  <rect x="662" y="530" width="275" height="58" rx="9" fill="#112a34" stroke="#36545c"/><text x="799" y="566" text-anchor="middle" fill="#c2dadd" font-family="Segoe UI,Arial" font-size="17">Read installation notes</text>
+  <rect x="959" y="530" width="275" height="58" rx="9" fill="#112a34" stroke="#36545c"/><text x="1096" y="566" text-anchor="middle" fill="#c2dadd" font-family="Segoe UI,Arial" font-size="17">Return to desktop</text>
+  <text x="800" y="626" text-anchor="middle" fill="#709299" font-family="Segoe UI,Arial" font-size="14">Concept illustration · installation is handled by Arch Linux archinstall</text>
+  <text x="1450" y="833" text-anchor="end" fill="#6f9299" font-family="Segoe UI,Arial" font-size="15">KONSOLE · AQUAOS LIVE SESSION</text>
+</svg>
