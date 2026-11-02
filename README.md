@@ -26,7 +26,7 @@ The optional `aquaos-first-boot` helper enables the Ollama service when run as r
 
 ## Visual direction and planned features
 
-> The images in this section are intended to be **concept art**, not screenshots of a finished AquaOS desktop. No AquaOS ISO or custom desktop has been validated yet.
+> Any images added to this section will be clearly labeled as **concept art**, not screenshots of a finished AquaOS desktop. No AquaOS ISO or custom desktop has been validated yet.
 
 The visual direction is a dark, OLED-friendly KDE desktop with deep black surfaces, aqua/cyan accents, restrained transparency, and soft window transitions. The concept is intended to feel like AquaOS while remaining a KDE Plasma profile.
 
@@ -168,6 +168,8 @@ libreoffice-fresh
 ## License and third-party software
 
 The repository's configuration files are provided for experimentation under the included license notice. Arch Linux, KDE Plasma, Steam, Ollama, Google Chrome, and other bundled or referenced components are governed by their respective upstream licenses and terms. AquaOS does not imply endorsement by those projects.
+
+
 
 
 
