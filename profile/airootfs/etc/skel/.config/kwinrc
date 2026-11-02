@@ -12,7 +12,6 @@ GLCore=true
 GLPreferBufferSwap=a
 MaxFPS=60
 OpenGLIsUnsafe=false
-WindowsBlock=false
 XRenderSmoothScale=false
 
 [Effect-Blur]
