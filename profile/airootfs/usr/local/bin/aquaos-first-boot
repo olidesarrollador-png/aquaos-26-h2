@@ -7,15 +7,13 @@ if [[ "${EUID}" -ne 0 ]]; then
 fi
 
 echo "Configuración inicial de AquaOS 26 H2"
-echo "Ollama está instalado; no se descargará ningún modelo."
+echo "Ollama está instalado; no se descargará ningún modelo ni agente de IA."
 systemctl enable ollama.service
 
 if ! command -v yay >/dev/null 2>&1; then
   echo
-  echo "Google Chrome se distribuye mediante AUR (paquete google-chrome)."
-  echo "Para instalarlo, inicia sesión con tu usuario normal y ejecuta:"
-  echo "  git clone https://aur.archlinux.org/google-chrome.git"
-  echo "  cd google-chrome && makepkg -si"
+  echo "Google Chrome no está incluido en esta versión experimental."
+  echo "La información de AquaOS está en la página del proyecto."
   echo
 fi
 
