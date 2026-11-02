@@ -5,6 +5,7 @@ linux-firmware
 mkinitcpio
 mkinitcpio-archiso
 archinstall
+dialog
 sudo
 networkmanager
 openssh
