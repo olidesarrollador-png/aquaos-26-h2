@@ -1,17 +1,17 @@
-# AquaOS licenses and authenticity keys
+# Licencias y claves de autenticidad de AquaOS
 
-## Current status
+## Situación actual
 
-AquaOS 26 H2 is an experimental Archiso profile. It has no implemented license manager, online activation service, signed license-key format, AquaOS Server edition, or AquaOS Pro feature unlocks. The current profile has no license gate: its prototype files can be built and tested without an AquaOS key. No authenticity keys are issued here today.
+AquaOS 26 H2 es un perfil experimental de Archiso. No tiene gestor de licencias, activación en línea, formato firmado de claves, edición AquaOS Server ni desbloqueos de AquaOS Pro. El prototipo no aplica restricciones de licencia y se puede compilar y probar sin una clave de AquaOS. Actualmente no se emiten claves de autenticidad.
 
-This repository is the intended place to publish official project notices and, if a real licensing system is implemented, verifiable instructions for obtaining keys. Until then, any string described elsewhere as an AquaOS Pro or Server key is not an official key. A code copied into a public repository cannot be made secret or inherently “unreplicable”; future authenticity would require a documented signature verification design and private signing keys kept outside the repository.
+Este repositorio es el lugar previsto para publicar avisos oficiales y, si se desarrolla un sistema de licencias, instrucciones verificables para obtener claves. Mientras tanto, cualquier texto presentado como clave de AquaOS Pro o Server no es oficial. Un código publicado en un repositorio público no puede ser secreto ni intrínsecamente «irreplicable»; para verificar autenticidad haría falta un sistema de firmas documentado y mantener las claves privadas fuera del repositorio.
 
-## Planned licensing, not currently offered
+## Planes de licencia, todavía no disponibles
 
-The project owner has described a future free license and a planned AquaOS Pro license with a one-time price of USD 9, intended to cover AquaOS 26 H2, AquaOS 27 H2, and later AquaOS releases. AquaOS Pro is still in development. There is no checkout, purchase, entitlement system, or feature list available, so this repository does not offer that license for sale or promise specific Pro features.
+El responsable del proyecto ha descrito una futura licencia gratuita y una licencia AquaOS Pro con un precio único previsto de 9 USD, que cubriría AquaOS 26 H2, AquaOS 27 H2 y versiones posteriores. AquaOS Pro sigue en desarrollo. No hay compra, sistema de derechos ni lista de funciones disponibles; este repositorio no vende esa licencia ni promete funciones Pro concretas.
 
-The AquaOS Server edition and its licensing are also not part of this prototype. Until official releases and terms are published here, there are no Server keys to claim or use. Current AquaOS profile functionality is not split into paid and free feature tiers.
+AquaOS Server y sus licencias tampoco forman parte de este prototipo. Hasta que se publiquen versiones y condiciones oficiales, no hay claves Server que reclamar o utilizar. Las funciones del perfil actual no están separadas en niveles gratuitos y de pago.
 
-## Upstream components
+## Componentes de terceros
 
-Arch Linux, KDE Plasma, Steam, Ollama, and other applications retain their own licenses and terms. See each upstream project for its applicable notices. A future AquaOS key would not replace those upstream terms.
+Arch Linux, KDE Plasma, Steam, Ollama y las demás aplicaciones mantienen sus respectivas licencias y condiciones. Consulta los avisos de cada proyecto de origen. AquaOS no sustituye esas condiciones.
